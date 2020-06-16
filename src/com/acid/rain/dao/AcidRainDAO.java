@@ -56,7 +56,7 @@ public class AcidRainDAO {
 		Connection conn = null; //import할때 java.sql.Connection해야대!!!!
 		PreparedStatement stmt = null;
 
-		ArrayList<AcidRain> list = null;	// 야!!!!!!! 만들어야ㅣㅈ1`!!!!!!
+		ArrayList<AcidRain> list = null;
 		AcidRain rain = null;
 		
 		//message에 담아서 보내자 얘두!
@@ -167,7 +167,7 @@ public class AcidRainDAO {
 		}catch(SQLException e){
 			System.out.println("board delete error: " + e); //디버깅용
 		}finally{
-			JDBCUtil.close(stmt, conn); //이걸루다가 하면 되네!SSSsss	//메소드 참말로 좋다야!
+			JDBCUtil.close(stmt, conn);
 			// insert도 열닫, delete도 여닫, update도 여닫!
 		}
 	}
@@ -184,7 +184,7 @@ public class AcidRainDAO {
 		Connection conn = null; //import할때 java.sql.Connection해야대!!!!
 		PreparedStatement stmt = null;
 
-		ArrayList<AcidRain> list = null;	// 야!!!!!!! 만들어야ㅣㅈ1`!!!!!!
+		ArrayList<AcidRain> list = null;
 		AcidRain rain = null;
 		
 		//message에 담아서 보내자 얘두!

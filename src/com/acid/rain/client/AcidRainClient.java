@@ -407,7 +407,7 @@ public class AcidRainClient {
 		String input = tfEntry.getText();
 		//
 		//쓰레드가 돌아가고있을때를 체크하고 돌고있을대만 아래 메소드를
-		//실행하고 싶으면 어떻게할까? ==> 몰라 이눔아
+		//실행하고 싶으면 어떻게할까? ==> tbd
 		//
 		if(input == null){	//널이면 리턴, 시작 안했으면 리턴
 			tfEntry.setText("");
@@ -440,7 +440,7 @@ public class AcidRainClient {
 		
 		//클라 시작 즉시 서버에 접속하여 DB와 통신 준비한다
 		try{
-			s = new Socket("49.173.165.42", 12345);
+			s = new Socket("your_ip", socket_num_from_DBServer.java);
 			oos = new ObjectOutputStream( s.getOutputStream() );
 			// 오브젝트로 통신하기위한 magical sequence
 			oos.flush();

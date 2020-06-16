@@ -9,7 +9,7 @@ public class JDBCUtil {
 	public static Connection getConnection() {
 		try {
 	        Class.forName("com.mysql.jdbc.Driver");
-	        return DriverManager.getConnection("jdbc:mysql://49.173.165.42:3306/acidrain", "root", "qwer1234");
+	        return DriverManager.getConnection("jdbc:mysql://your_ip:your_db_portnum/acidrain", "id", "pw");
 	        //접속정보 리턴해오는거죠? 그래서 dao에서 쉽게한거
 		} catch (Exception e) {
 			e.printStackTrace();

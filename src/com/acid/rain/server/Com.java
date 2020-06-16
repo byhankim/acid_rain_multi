@@ -38,7 +38,6 @@ public class Com extends Thread{
 		name = "user" + ++nameCnt; //default 네임 표시용
 		this.server = server;
 		this.s = s;
-		//랜덤도 여기서 그냥 초기화하자^^
 		random = new Random();
 		
 		try{
@@ -234,7 +233,7 @@ public class Com extends Thread{
 				case 9:
 					server.exitcom(this);
 					server.sendUserList2All(11);
-					onAir = false;	//while을 벗어나야 catch걸리기전에 꺼버리지
+					onAir = false;	//while을 벗어나야 catch걸리기전에 끌수있
 					break;
 				case 33: //패널의 state값 받아온다
 					panelState = msg.getPanelState();
@@ -243,8 +242,7 @@ public class Com extends Thread{
 				case 34:
 					entryTemp = msg.getEntryString();
 					//여기서 단어를 각각 클라이언트로 쏴주는데
-					//synchronized를 활용하여
-					//값에 접근중이면 기다리도록 처리를 해 주어야 한다. 아님 곰보SSSsss
+					//synchronized를 활용하여 값에 접근중이면 기다리도록 처리
 					server.sendInputEntry2All(14, entryTemp);
 					break;
 				}//switch문 끝
